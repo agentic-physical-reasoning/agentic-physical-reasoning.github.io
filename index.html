@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic Physical Reasoning</title>
+<meta name="description" content="Project page for the NeurIPS 2026 position paper Evaluating Physical Reasoning in LLM Agents Requires Construction Benchmarks, with the living audit of benchmarks that accompanies it.">
+<style>
+  :root { --bg:#ffffff; --fg:#1b1b1f; --muted:#5f6368; --line:#e3e3e8; --accent:#0b3d91; --soft:#f3f5fa; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111216; --fg:#e8e8ec; --muted:#a2a6b1; --line:#2a2c33; --accent:#8fb3ff; --soft:#1a1c22; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:48px 16px 80px; }
+  .venue { color:var(--muted); font-size:14px; letter-spacing:.04em; text-transform:uppercase; }
+  h1 { font-size:34px; line-height:1.2; margin:8px 0 18px; }
+  .authors { margin:0 0 6px; }
+  .authors span { white-space:nowrap; }
+  .affil { color:var(--muted); font-size:15px; margin:0 0 22px; }
+  .links a { display:inline-block; margin:0 10px 10px 0; padding:8px 14px; border:1px solid var(--line); border-radius:999px; color:var(--accent); text-decoration:none; font-size:15px; }
+  .links a:hover { background:var(--soft); }
+  .links .soon { color:var(--muted); border-style:dashed; cursor:default; }
+  h2 { font-size:21px; margin:40px 0 10px; }
+  p { margin:0 0 14px; }
+  .box { background:var(--soft); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  ol, ul { padding-left:22px; }
+  li { margin:4px 0; }
+  code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.92em; }
+  footer { margin-top:56px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+  footer a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="venue">NeurIPS 2026 · Position Paper Track</div>
+  <h1>Evaluating Physical Reasoning in LLM Agents Requires Construction Benchmarks</h1>
+  <p class="authors">
+    <span>Wenhao Deng<sup>1,2</sup></span>, <span>Tian Xia<sup>1</sup></span>, <span>Yuru Jiang<sup>1</sup></span>, <span>Joemon M. Jose<sup>2</sup></span>, <span>Tailin Wu<sup>1</sup></span>
+  </p>
+  <p class="affil"><sup>1</sup>School of Engineering, Westlake University &nbsp;·&nbsp; <sup>2</sup>School of Computing Science, University of Glasgow</p>
+  <div class="links">
+    <a href="https://openreview.net/forum?id=42PVaAYxLX">OpenReview</a>
+    <a href="https://github.com/AI4Science-WestlakeU/awesome-agentic-physical-reasoning">Living audit (GitHub)</a>
+    <a class="soon" title="Available with the camera-ready version">Paper PDF · soon</a>
+    <a class="soon" title="In preparation">Video · soon</a>
+  </div>
+
+  <h2>Abstract</h2>
+  <p>Physical reasoning is central to agents that step into the physical world. Models now excel at code and math, but their physical reasoning capabilities remain largely untested. Existing physical benchmarks evaluate goal-state matching rather than functional performance. This position paper argues that evaluating physical reasoning in LLM agents requires construction benchmarks, where physics verifies functional outcomes. To operationalize physical reasoning evaluation, we identify five capabilities spanning the full agentic loop from goal to verified artifact. Our audit of eleven physical benchmarks finds only two that combine realistic physics with functional verification, the minimum requirements for testing physical reasoning; both are construction benchmarks. Neither covers all five capabilities, yet frontier models already achieve near-zero success as task complexity increases. Progress depends on the breadth of benchmarks we build. We call on academia, game studios, and industry labs to expand construction benchmarks along both axes, widening capability coverage and deepening physical challenges. Their breadth determines how fully agents move from code and math to reshaping the physical world.</p>
+
+  <h2>The standard</h2>
+  <div class="box">
+    <p>An evaluation of physical reasoning must meet two minimum requirements.</p>
+    <ol>
+      <li><strong>Functional verification.</strong> Physics judges the outcome. The artifact works or it does not.</li>
+      <li><strong>Realistic physics.</strong> Gravity, friction, and collision constrain every action along the way.</li>
+    </ol>
+    <p>Together they define one standard for evaluation, <em>functional verification under irreversible intervention</em>, which spans the full causal chain from intent to verifiable artifact. We decompose that chain into five capabilities: goal-driven design, physics-aware planning, embodied execution, functional evaluation, and closed-loop refinement.</p>
+  </div>
+
+  <h2>The living audit</h2>
+  <p>The paper audits eleven benchmarks against the five capabilities. The audit continues after the paper is frozen. New benchmarks are assessed against the same criteria and added to the <a href="https://github.com/AI4Science-WestlakeU/awesome-agentic-physical-reasoning">awesome-agentic-physical-reasoning</a> repository, which also explains how to submit one. The table will be rendered here.</p>
+
+  <footer>
+    Maintained by the authors. Questions and submissions go to the <a href="https://github.com/AI4Science-WestlakeU/awesome-agentic-physical-reasoning/issues">repository issues</a>.
+  </footer>
+</main>
+</body>
+</html>
