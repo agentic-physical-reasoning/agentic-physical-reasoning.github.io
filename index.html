@@ -58,7 +58,57 @@
   </div>
 
   <h2>The living audit</h2>
-  <p>The paper audits eleven benchmarks against the five capabilities. The audit continues after the paper is frozen. New benchmarks are assessed against the same criteria and added to the <a href="https://github.com/AI4Science-WestlakeU/awesome-agentic-physical-reasoning">awesome-agentic-physical-reasoning</a> repository, which also explains how to submit one. The table will be rendered here.</p>
+  <p>The paper audits eleven benchmarks against the five capabilities. The audit continues after the paper is frozen. New benchmarks are assessed against the same criteria and added to the <a href="https://github.com/AI4Science-WestlakeU/awesome-agentic-physical-reasoning">awesome-agentic-physical-reasoning</a> repository, which also explains how to submit one. The table below is rendered from that repository's <code>data/benchmarks.json</code>.</p>
+  <div id="audit"></div>
+  <p class="legend">✓ tested · ✗ not tested · ◐ partial · ? unclear from the published text. <strong>Both</strong> = realistic physics and functional verification.</p>
+  <style>
+    .audit-table { width:100%; border-collapse:collapse; font-size:14px; margin:12px 0 6px; }
+    .audit-table th, .audit-table td { padding:6px 8px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    .audit-table th { color:var(--muted); font-weight:600; }
+    .audit-table td.c { text-align:center; }
+    .audit-table tr.cls td { background:var(--soft); font-weight:600; }
+    .audit-table a { color:var(--accent); text-decoration:none; }
+    .audit-wrap { overflow-x:auto; }
+    .legend { color:var(--muted); font-size:14px; }
+    h3.sub { font-size:17px; margin:22px 0 4px; }
+  </style>
+  <script>
+    (function () {
+      var CAPS = ["GDD", "PAP", "EE", "FE", "CLR"];
+      var MARK = { yes: "✓", no: "✗", partial: "◐", unclear: "?", "true": "✓", "false": "✗" };
+      var ORDER = ["Construction", "Embodied", "Simplified Sandbox", "Symbolic-Physical", "Unclassified"];
+      function mark(v) { return MARK[String(v)] || "?"; }
+      function table(items) {
+        var h = '<div class="audit-wrap"><table class="audit-table"><thead><tr><th>Benchmark</th><th>Year</th>' +
+          CAPS.map(function (c) { return "<th>" + c + "</th>"; }).join("") +
+          "<th>Physics</th><th>Evaluation</th><th>Both</th><th>Links</th></tr></thead><tbody>";
+        ORDER.forEach(function (cls) {
+          var g = items.filter(function (b) { return b["class"] === cls; });
+          if (!g.length) return;
+          h += '<tr class="cls"><td colspan="11">' + cls + "</td></tr>";
+          g.sort(function (a, b) { return (b.year - a.year) || a.name.localeCompare(b.name); }).forEach(function (b) {
+            var links = [];
+            if (b.paper) links.push('<a href="' + b.paper + '">paper</a>');
+            if (b.code) links.push('<a href="' + b.code + '">code</a>');
+            h += "<tr><td>" + b.name + "</td><td>" + b.year + "</td>" +
+              CAPS.map(function (c) { return '<td class="c">' + mark(b.capabilities[c]) + "</td>"; }).join("") +
+              "<td>" + b.physics + "</td><td>" + b.evaluation + "</td>" +
+              '<td class="c">' + mark(b.meets_standard) + "</td><td>" + (links.join(" · ") || "—") + "</td></tr>";
+          });
+        });
+        return h + "</tbody></table></div>";
+      }
+      fetch("data/benchmarks.json").then(function (r) { return r.json(); }).then(function (items) {
+        var audited = items.filter(function (b) { return b.status === "audited"; });
+        var cands = items.filter(function (b) { return b.status === "candidate"; });
+        var el = document.getElementById("audit");
+        el.innerHTML = '<h3 class="sub">Audited in the paper (' + audited.length + ")</h3>" + table(audited) +
+          (cands.length ? '<h3 class="sub">Added after the paper (' + cands.length + "), pending review</h3>" + table(cands) : "");
+      }).catch(function () {
+        document.getElementById("audit").textContent = "The audit table is in the repository linked above.";
+      });
+    })();
+  </script>
 
   <footer>
     Maintained by the authors. Questions and submissions go to the <a href="https://github.com/AI4Science-WestlakeU/awesome-agentic-physical-reasoning/issues">repository issues</a>.

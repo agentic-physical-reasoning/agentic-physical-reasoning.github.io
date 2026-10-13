@@ -1,0 +1,359 @@
+[
+ {
+  "name": "ALFWorld",
+  "status": "audited",
+  "year": 2020,
+  "class": "Symbolic-Physical",
+  "physics": "symbolic",
+  "evaluation": "goal-state",
+  "capabilities": {
+   "GDD": "no",
+   "PAP": "no",
+   "EE": "no",
+   "FE": "no",
+   "CLR": "no"
+  },
+  "meets_standard": "no",
+  "paper": "https://arxiv.org/abs/2010.03768",
+  "code": "https://github.com/alfworld/alfworld",
+  "notes": "Text-based embodied reasoning in simulated households. Physics exists as logical rules (pick up, place, heat); gravity, friction, and collision are absent.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "ScienceWorld",
+  "status": "audited",
+  "year": 2022,
+  "class": "Symbolic-Physical",
+  "physics": "symbolic",
+  "evaluation": "goal-state",
+  "capabilities": {
+   "GDD": "no",
+   "PAP": "yes",
+   "EE": "no",
+   "FE": "no",
+   "CLR": "no"
+  },
+  "meets_standard": "no",
+  "paper": "https://arxiv.org/abs/2203.07540",
+  "code": "https://github.com/allenai/ScienceWorld",
+  "notes": "Elementary-school science tasks (thermodynamics, circuits, chemistry, friction) as rule-based state transitions. Agents plan over heat flow, circuit topology, and reaction order.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "EmbodiedBench",
+  "status": "audited",
+  "year": 2025,
+  "class": "Embodied",
+  "physics": "realistic",
+  "evaluation": "goal-state",
+  "capabilities": {
+   "GDD": "no",
+   "PAP": "no",
+   "EE": "yes",
+   "FE": "no",
+   "CLR": "no"
+  },
+  "meets_standard": "no",
+  "paper": "https://arxiv.org/abs/2502.09560",
+  "code": "https://github.com/EmbodiedBench/EmbodiedBench",
+  "notes": "VLMs across four environments spanning high-level skill APIs and low-level control. Rigid-body physics governs the environment; discrete commands abstract away continuous dynamics.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "PARTNR",
+  "status": "audited",
+  "year": 2024,
+  "class": "Embodied",
+  "physics": "realistic",
+  "evaluation": "goal-state",
+  "capabilities": {
+   "GDD": "no",
+   "PAP": "no",
+   "EE": "yes",
+   "FE": "no",
+   "CLR": "no"
+  },
+  "meets_standard": "no",
+  "paper": "https://arxiv.org/abs/2411.00081",
+  "code": "https://github.com/facebookresearch/partnr-planner",
+  "notes": "LLM planners on multi-agent household tasks with rigid-body and articulated-object physics. Predicate-based goal-state matching across spatial and temporal constraints.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "Plancraft",
+  "status": "audited",
+  "year": 2024,
+  "class": "Simplified Sandbox",
+  "physics": "simplified",
+  "evaluation": "goal-state",
+  "capabilities": {
+   "GDD": "no",
+   "PAP": "no",
+   "EE": "no",
+   "FE": "no",
+   "CLR": "yes"
+  },
+  "meets_standard": "no",
+  "paper": "https://arxiv.org/abs/2412.21033",
+  "code": "https://github.com/gautierdag/plancraft",
+  "notes": "Inventory-based crafting and sequential planning in Minecraft, where blocks float without support and structures cannot collapse.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "MineDojo",
+  "status": "audited",
+  "year": 2022,
+  "class": "Simplified Sandbox",
+  "physics": "simplified",
+  "evaluation": "goal-state",
+  "capabilities": {
+   "GDD": "no",
+   "PAP": "no",
+   "EE": "no",
+   "FE": "no",
+   "CLR": "yes"
+  },
+  "meets_standard": "no",
+  "paper": "https://arxiv.org/abs/2206.08853",
+  "code": "https://github.com/MineDojo/MineDojo",
+  "notes": "Open-ended framework for embodied agents in Minecraft.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "TeamCraft",
+  "status": "audited",
+  "year": 2024,
+  "class": "Simplified Sandbox",
+  "physics": "simplified",
+  "evaluation": "goal-state",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "no",
+   "EE": "no",
+   "FE": "no",
+   "CLR": "no"
+  },
+  "meets_standard": "no",
+  "paper": "https://arxiv.org/abs/2412.05255",
+  "code": "https://github.com/teamcraft-bench/teamcraft",
+  "notes": "Multi-agent collaboration on construction-style tasks specified in natural language.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "Minecraft Builder Dialog",
+  "status": "audited",
+  "year": 2024,
+  "class": "Simplified Sandbox",
+  "physics": "simplified",
+  "evaluation": "goal-state",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "no",
+   "EE": "no",
+   "FE": "no",
+   "CLR": "no"
+  },
+  "meets_standard": "no",
+  "paper": "https://arxiv.org/abs/2407.12734",
+  "code": null,
+  "notes": "Spatial reasoning in collaborative building driven by dialogue.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "MineAnyBuild",
+  "status": "audited",
+  "year": 2025,
+  "class": "Simplified Sandbox",
+  "physics": "simplified",
+  "evaluation": "goal-state",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "no",
+   "EE": "no",
+   "FE": "no",
+   "CLR": "no"
+  },
+  "meets_standard": "no",
+  "paper": "https://arxiv.org/abs/2505.20148",
+  "code": "https://github.com/MineAnyBuild/MineAnyBuild",
+  "notes": "Spatial planning from building descriptions in Minecraft.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "BesiegeField",
+  "status": "audited",
+  "year": 2025,
+  "class": "Construction",
+  "physics": "realistic",
+  "evaluation": "functional",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "yes",
+   "EE": "no",
+   "FE": "yes",
+   "CLR": "yes"
+  },
+  "meets_standard": "yes",
+  "paper": "https://arxiv.org/abs/2510.14980",
+  "code": "https://github.com/Godheritage/BesiegeField",
+  "notes": "Mechanical design in the Besiege physics sandbox from functional specifications. Machines are construction-tree programs compiled to the game; outcomes are scored by simulation replay. Version 3 (EMNLP 2026) retitles the paper \"Compositional Machine Design as Program Synthesis with LLMs\" and covers seven task families.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "BuildArena",
+  "status": "audited",
+  "year": 2025,
+  "class": "Construction",
+  "physics": "realistic",
+  "evaluation": "functional",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "yes",
+   "EE": "no",
+   "FE": "yes",
+   "CLR": "yes"
+  },
+  "meets_standard": "yes",
+  "paper": "https://arxiv.org/abs/2510.16559",
+  "code": "https://github.com/AI4Science-WestlakeU/BuildArena",
+  "notes": "Structural construction (Transport, Support, Lift) in a physics simulator with six difficulty dimensions. The default evaluation is single-shot; an optional protocol feeds simulator results back for further rounds. Accepted at ICML 2026.",
+  "assessed": "2026-05-07",
+  "assessed_by": "paper (Table 2)"
+ },
+ {
+  "name": "ArtifactArena",
+  "status": "candidate",
+  "year": 2026,
+  "class": "Construction",
+  "physics": "realistic",
+  "evaluation": "functional",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "unclear",
+   "EE": "no",
+   "FE": "yes",
+   "CLR": "yes"
+  },
+  "meets_standard": "yes",
+  "paper": "https://arxiv.org/abs/2610.06511",
+  "code": "https://github.com/orgs/ArtifactArena/repositories",
+  "notes": "Models engineer robots (MJCF hardware plus a Python controller) that fight in a MuJoCo 3.10 arena. Entries pass static validation and a qualification match, then a tournament yields Bradley-Terry Elo from simulated matches with no human or LLM judge. Three harnesses, zero-shot, verifier-guided refinement (10 iterations), and an 18-tool design lab (10 turns). 21 models including GPT-6 Astra. Cites BuildArena as \"a close example\".",
+  "assessed": "2026-10-14",
+  "assessed_by": "maintainer draft (full text read), pending author review"
+ },
+ {
+  "name": "PACE-Bench",
+  "status": "candidate",
+  "year": 2026,
+  "class": "Construction",
+  "physics": "realistic",
+  "evaluation": "functional",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "yes",
+   "EE": "no",
+   "FE": "yes",
+   "CLR": "yes"
+  },
+  "meets_standard": "yes",
+  "paper": "https://arxiv.org/abs/2608.14441",
+  "code": "https://github.com/thunlp/PACE-Bench",
+  "notes": "Agents write a Python build_agent() and agent_action() for a Box2D sandbox, then adapt a working design after the physics changes (144 source-to-target pairs across six domains). Score is the fraction of hard constraints satisfied, then task progress; 20 attempts with diagnostic feedback. Physics is 2D rigid-body, which this audit counts as realistic; the authors note results may not transfer to 3D. No GPT-6 results.",
+  "assessed": "2026-10-14",
+  "assessed_by": "maintainer draft (full text read), pending author review"
+ },
+ {
+  "name": "PolyBridgeBench",
+  "status": "candidate",
+  "year": 2026,
+  "class": "Construction",
+  "physics": "realistic",
+  "evaluation": "functional",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "unclear",
+   "EE": "no",
+   "FE": "yes",
+   "CLR": "yes"
+  },
+  "meets_standard": "yes",
+  "paper": "https://arxiv.org/abs/2609.21493",
+  "code": null,
+  "notes": "Multimodal LLMs design bridges as node-member-material topologies (JSON) from an editor screenshot and constraints; success is all vehicles crossing within a 12-second native Poly Bridge simulation. 189 levels in 27 families; at most three LLM calls and three physics attempts per level; Valid@k, Success@k, Recovery@k. Physics is the game's 2D dynamics. Six MLLMs, no GPT-6. Code release not stated. Cites BuildArena as \"the closest physics-grounded construction benchmark\".",
+  "assessed": "2026-10-14",
+  "assessed_by": "maintainer draft (full text read), pending author review"
+ },
+ {
+  "name": "RLE-Bench",
+  "status": "candidate",
+  "year": 2026,
+  "class": "Construction",
+  "physics": "realistic",
+  "evaluation": "functional",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "unclear",
+   "EE": "no",
+   "FE": "yes",
+   "CLR": "unclear"
+  },
+  "meets_standard": "partial",
+  "paper": "https://arxiv.org/abs/2609.34210",
+  "code": "https://rle-bench.github.io/",
+  "notes": "51 tasks in nine families for coding agents; two families are mechanical design in MuJoCo (a mecanum mobile-manipulator base submitted as robot.xml plus controller.py, and gravity compensation for GELLO lead arms), scored by simulation checkpoints for validity, static and dynamic stability, residual torque, and push recovery. The assessment here covers those two families only. 11 model-harness combinations including GPT-6 Astra. Code release planned.",
+  "assessed": "2026-10-14",
+  "assessed_by": "maintainer draft (full text read), pending author review"
+ },
+ {
+  "name": "LMBuild",
+  "status": "candidate",
+  "year": 2026,
+  "class": "Unclassified",
+  "physics": "partial",
+  "evaluation": "mixed",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "unclear",
+   "EE": "no",
+   "FE": "partial",
+   "CLR": "yes"
+  },
+  "meets_standard": "partial",
+  "paper": "https://arxiv.org/abs/2610.04292",
+  "code": "https://github.com/Lumos-Jiateng/LMBuild",
+  "notes": "Agents assemble objects from parts with tools (retrieve, create, place) toward buildable and functional structures; 200-object core set from CAD sources. Operability is tested in simulation; stability and joint checks come from a rule-based diagnostic report. Up to three rounds with six-view renderings as feedback. 30 systems including GPT-6 Astra.",
+  "assessed": "2026-10-14",
+  "assessed_by": "maintainer draft (full text read), pending author review"
+ },
+ {
+  "name": "BrickBench",
+  "status": "candidate",
+  "year": 2026,
+  "class": "Unclassified",
+  "physics": "partial",
+  "evaluation": "judge",
+  "capabilities": {
+   "GDD": "yes",
+   "PAP": "unclear",
+   "EE": "no",
+   "FE": "no",
+   "CLR": "yes"
+  },
+  "meets_standard": "no",
+  "paper": "https://arxiv.org/abs/2610.12452",
+  "code": "https://github.com/kulits/BrickAgent",
+  "notes": "Coding agents design LEGO sets with BrickAgent tools (300 turns). PyBullet settles connected components under gravity and flags instability; connection strength is not modeled. Alignment and design are judged by VLMs (Gemma 4 31B question answering, pairwise Elo validated by a human study). 11 agents including GPT-6 Astra and GPT-6.1 Sol. Cites BuildArena.",
+  "assessed": "2026-10-14",
+  "assessed_by": "maintainer draft (full text read), pending author review"
+ }
+]
