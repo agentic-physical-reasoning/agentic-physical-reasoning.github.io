@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agentic Physical Reasoning</title>
-<meta name="description" content="Evaluating Physical Reasoning in LLM Agents Requires Construction Benchmarks, a NeurIPS 2026 position paper, with links to the paper, the APR project page, and the Awesome APR audit.">
+<meta name="description" content="Evaluating Physical Reasoning in LLM Agents Requires Construction Benchmarks, a NeurIPS 2026 position paper, with links to its project page and the Awesome APR repository. The project page now hosts the paper and related materials.">
 <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" sizes="any">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
@@ -59,6 +59,8 @@ a.btn:hover{background:var(--deep);color:#fff;border-color:var(--deep)}
 .author-notes a{text-decoration:none}
 .author-notes a:hover{text-decoration:underline}
 main{padding-bottom:56px}
+.moved{border-top:1px solid var(--rule);padding-top:18px;font-size:13px;line-height:1.6;color:var(--muted)}
+.moved a{color:var(--ink)}
 .abstract-area{border-top:1px solid var(--rule)}
 .abstract summary{font-size:17px;font-weight:700;color:var(--ink);cursor:pointer;padding:17px 0;list-style:none;display:flex;align-items:center;gap:10px;transition:color .2s,background .2s}
 .abstract summary::-webkit-details-marker{display:none}
@@ -107,9 +109,8 @@ main{padding-bottom:56px}
       </div>
       <p class="venue">NeurIPS 2026 <span aria-hidden="true">/</span> Position Paper Track</p>
       <h1>Evaluating Physical Reasoning in LLM Agents Requires <span>Construction Benchmarks</span></h1>
-      <div class="links" role="group" aria-label="Paper and resources">
-        <a class="btn primary" href="https://openreview.net/forum?id=42PVaAYxLX" target="_blank" rel="noopener">Paper</a>
-        <a class="btn" href="https://ai4science-westlakeu.github.io/APR/"><span>APR<span class="apr-dot" aria-hidden="true">.</span></span></a>
+      <div class="links" role="group" aria-label="Project page and resources">
+        <a class="btn primary" href="https://ai4science-westlakeu.github.io/APR/">Project Page</a>
         <a class="btn" href="https://github.com/AI4Science-WestlakeU/awesome-agentic-physical-reasoning" target="_blank" rel="noopener"><span>Awesome APR<span class="apr-dot" aria-hidden="true">.</span></span></a>
       </div>
       <div class="byline">
@@ -132,11 +133,12 @@ main{padding-bottom:56px}
 
   <main id="main">
     <div class="wrap abstract-area">
-      <details class="abstract" id="abstract" open>
+      <details class="abstract" id="abstract">
         <summary><span class="abstract-label">Abstract</span><span class="abstract-toggle" aria-hidden="true"></span></summary>
         <p id="abstract-text">Physical reasoning is central to agents that step into the physical world. Models now excel at code and math, but their physical reasoning capabilities remain largely untested. Existing physical benchmarks evaluate goal-state matching rather than functional performance. This position paper argues that evaluating physical reasoning in LLM agents requires construction benchmarks, where physics verifies functional outcomes. To operationalize physical reasoning evaluation, we identify five capabilities spanning the full agentic loop from goal to verified artifact. Our audit of eleven physical benchmarks finds that the only two combining realistic physics with functional verification, the minimum requirements for testing physical reasoning, are construction benchmarks. Neither covers all five capabilities, yet both already show current models failing as task complexity increases. Progress depends on the breadth of benchmarks. We call on academia, game studios, and industry labs to expand construction benchmarks along both axes, widening capability coverage and deepening physical challenges. Their breadth determines how fully agents move from code and math to reshaping the physical world.</p>
       </details>
     </div>
+    <p class="wrap moved">This homepage has moved. Please visit the <a href="https://ai4science-westlakeu.github.io/APR/">project page</a> for the paper and related materials.</p>
   </main>
 </body>
 </html>
